@@ -281,6 +281,65 @@ sudo etc/init.d/apache2 reload
 
 It should now work.
 
+=
+###Run the tests
+=
 
+You can now run the Gatling tests on the blog app by following the instructions found here: https://github.com/archerydwd/gatling-tests
+
+=
+###Create the rails sakila application
+=
+
+Go to the git folder and follow the instructions found here: https://github.com/archerydwd/ror_sakila to build the rails sakila app.
+
+Once you have finished this, cd into your new app and run the following:
+
+```
+bundle install
+bundle exec rake db:migrate
+```
+
+The above installs missing gems and creates a migration for the database.
+
+=
+###Create the config file for the sakila app
+=
+
+```
+sudo touch etc/apache2/sites-available/ror_sakila.conf
+sudo vim etc/apache2/sites-available/ror_sakila.conf
+```
+
+And insert the following making sure to replace darren with your own directory:
+
+```
+<VirtualHost *:80>
+  ServerName 127.0.0.1:80
+  DocumentRoot /home/darren/git/ror_sakila/public
+  <Directory /home/darren/git/ror_sakila/public>
+    AllowOverride all
+    Options -MultiViews
+  </Directory>
+</VirtualHost>
+```
+
+**Disable The Blog app**
+
+```
+sudo a2dissite ror_blog.conf
+```
+
+**Enable The Sakila app**
+
+```
+sudo a2ensite ror_sakila.conf
+```
+
+=
+###Run the tests
+=
+
+You can now run the Gatling tests on the sakila app by following the instructions found here: https://github.com/archerydwd/gatling-tests
 
 
