@@ -3,7 +3,6 @@ Instructions on installing Apache, Rails &amp; Passenger on xubuntu
 
 =
 ###Preconditions
-=
 
 >You have a clean instance of ubuntu running.
 
@@ -11,7 +10,6 @@ You can get ubuntu from here: http://www.ubuntu.com/download
 
 =
 ###Install Apache
-=
 
 Open a terminal and enter the following commands:
 
@@ -24,7 +22,6 @@ sudo apt-get install vim        //or your favourite text editor
 
 =
 ###Install Ruby
-=
 
 **Install rvm**
 
@@ -47,7 +44,6 @@ rvm --default use ruby-2.2.0
 
 =
 ###Install rails
-=
 
 **Update gem manager**
 
@@ -71,7 +67,6 @@ It should be the latest available, at the time of writing this: 4.2.0
 
 =
 ###Passenger
-=
 
 **Install required libraries**
 
@@ -93,7 +88,6 @@ It will then produce an example virtual host for an app, which you can ignore.
 
 =
 ###Restart apache
-=
 
 ```
 sudo etc/init.d/apache2 restart
@@ -122,7 +116,6 @@ Once this is done with success, navigate to localhost or 127.0.0.1 in your brows
 
 =
 ###Install sqlite for ruby
-=
 
 ```
 gem install sqlite3-ruby
@@ -130,7 +123,6 @@ gem install sqlite3-ruby
 
 =
 ###Install MySQL
-=
 
 When it asks for a password, you can set it to what you want. For the purposes of this I will use the password "password"
 
@@ -158,7 +150,6 @@ gem install mysql2
 
 =
 ###Create the rails blog application
-=
 
 In your home directory, create a new folder called git:
 
@@ -193,7 +184,6 @@ And do the same thing again.
 
 =
 ###Create the config file for the blog app
-=
 
 ```
 sudo touch etc/apache2/sites-available/ror_blog.conf
@@ -215,7 +205,6 @@ And insert the following making sure to replace darren with your own directory:
 
 =
 ###Disable the default site in apache
-=
 
 ```
 sudo a2dissite 000-default
@@ -231,7 +220,6 @@ The above will give a list of sites that are currently enabled. If the name in t
 
 =
 ###Enable the blog site
-=
 
 ```
 sudo a2ensite ror_blog.conf
@@ -241,7 +229,6 @@ Then we need to reload the apache server
 
 =
 ###Relaod the Apache Server
-=
 
 ```
 sudo etc/init.d/apache2 reload
@@ -283,13 +270,11 @@ It should now work.
 
 =
 ###Run the tests
-=
 
 You can now run the Gatling tests on the blog app by following the instructions found here: https://github.com/archerydwd/gatling-tests
 
 =
 ###Create the rails sakila application
-=
 
 Follow the instructions found here: https://github.com/archerydwd/ror_sakila to build the rails sakila app.
 
@@ -304,7 +289,6 @@ The above installs missing gems and creates a migration for the database.
 
 =
 ###Create the config file for the sakila app
-=
 
 ```
 sudo touch etc/apache2/sites-available/ror_sakila.conf
@@ -338,7 +322,6 @@ sudo a2ensite ror_sakila.conf
 
 =
 ###Run the tests
-=
 
 You can now run the Gatling tests on the sakila app by following the instructions found here: https://github.com/archerydwd/gatling-tests
 
