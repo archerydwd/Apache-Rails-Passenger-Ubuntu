@@ -288,6 +288,23 @@ bundle exec rake db:migrate
 The above installs missing gems and creates a migration for the database.
 
 =
+###Getting the delete function to work
+
+To get the delete function to work, we need to edit the index files in all of the directories in app/views/ directory. We need to change link_to to button_to on the delete line. For example the actors index.html.erb file:
+
+vim app/views/actors/index.html.erb
+
+```
+...
+
+  <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
+  <td><%= button_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+
+...
+```
+
+=
 ###Create the config file for the sakila app
 
 ```
