@@ -5,9 +5,9 @@ Instructions on installing Apache, Rails &amp; Passenger on xubuntu
 ###Preconditions
 =
 
->You have a clean instance of xubuntu running.
+>You have a clean instance of ubuntu running.
 
-You can get xubuntu from here: http://xubuntu.org/getxubuntu/
+You can get ubuntu from here: http://www.ubuntu.com/download
 
 =
 ###Install Apache
