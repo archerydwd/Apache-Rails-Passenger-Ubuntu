@@ -177,6 +177,20 @@ bundle exec rake db:migrate
 
 The above installs missing gems and creates a migration for the database.
 
+Then to get the delete function to work, we need to edit the link_to to button_to:
+
+```
+vim app/views/comments/_comment.html.erb
+```
+Change the delete line from link_to to button_to
+Then:
+
+```
+vim app/views/articles/index.html.erb
+```
+
+And do the same thing again.
+
 =
 ###Create the config file for the blog app
 =
