@@ -291,7 +291,7 @@ You can now run the Gatling tests on the blog app by following the instructions 
 ###Create the rails sakila application
 =
 
-Go to the git folder and follow the instructions found here: https://github.com/archerydwd/ror_sakila to build the rails sakila app.
+Follow the instructions found here: https://github.com/archerydwd/ror_sakila to build the rails sakila app.
 
 Once you have finished this, cd into your new app and run the following:
 
