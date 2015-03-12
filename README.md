@@ -29,6 +29,7 @@ sudo apt-get install vim        //or your favourite text editor
 **Install rvm**
 
 ```
+sudo apt-get install curl
 \curl -L https://get.rvm.io | bash -s stable --ruby
 source /home/darren/.rvm/scripts/rvm       //change darren to your directory home name
 ```
