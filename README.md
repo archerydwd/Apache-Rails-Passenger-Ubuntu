@@ -34,7 +34,8 @@ sudo apt-get install curl
 source /home/darren/.rvm/scripts/rvm       //change darren to your directory home name
 ```
 
-The second above command will be given to you when the first is finished.
+If you get an error about keys, it will produce a command for you to use to fix it, then do the command again.
+The third command will be given to you when the first is finished.
 
 **Update rvm**
 
