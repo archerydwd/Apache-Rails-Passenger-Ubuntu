@@ -276,6 +276,26 @@ You can now run the Gatling tests on the blog app by following the instructions 
 =
 ###Create the rails sakila application
 
+**Create the database**
+
+To create the database, we need to login and enter a few commands. Please note, if this is your first time using mysql, the first time you login and enter a password, this acts as setting a password. If you don't want to set a password (bad idea) just hit enter when it requests the password.
+
+```
+mysql -u root -p
+create database ror_sakila;
+use ror_sakila;
+
+source PATH/TO/sakila_dump.sql
+```
+
+Then to check that this has indeed worked, you can enter the following command and you should see a list of the tables in the database:
+
+```
+show tables;
+```
+
+**Create the application**
+
 Follow the instructions found here: https://github.com/archerydwd/ror_sakila to build the rails sakila app.
 
 Once you have finished this, cd into your new app and run the following:
