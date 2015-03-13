@@ -1,5 +1,5 @@
-# Apache-Rails-Passenger-Xubuntu
-Instructions on installing Apache, Rails &amp; Passenger on xubuntu
+# Apache-Rails-Passenger-Ubuntu
+Instructions on installing Apache, Rails &amp; Passenger on ubuntu
 
 =
 ###Preconditions
