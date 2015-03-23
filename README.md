@@ -1,12 +1,12 @@
 # Apache-Rails-Passenger-Ubuntu
-Instructions on installing Apache, Rails &amp; Passenger on ubuntu
+Guide on installing and building Rails &amp; applications with Apache and Passenger on Ubuntu.
 
 =
 ###Preconditions
 
->You have a clean instance of ubuntu running.
+>You have a clean instance of Ubuntu running.
 
-You can get ubuntu from here: http://www.ubuntu.com/download
+You can get Ubuntu from here: http://www.ubuntu.com/download
 
 =
 ###Install Apache
@@ -157,7 +157,7 @@ In your home directory, create a new folder called git:
 mkdir git
 ```
 
-Then cd into this folder and follow the instructions found here: https://github.com/archerydwd/ror-blog to build the rails blog app.
+Then cd into this folder and follow the instructions found here: https://github.com/archerydwd/ror_blog to build the rails blog application.
 
 Once you have finished this, cd into your new app and run the following:
 
@@ -173,8 +173,8 @@ Then to get the delete function to work, we need to edit the link_to to button_t
 ```
 vim app/views/comments/_comment.html.erb
 ```
-Change the delete line from link_to to button_to
-Then:
+
+Change the delete line from link_to to button_to and then:
 
 ```
 vim app/views/articles/index.html.erb
@@ -183,7 +183,7 @@ vim app/views/articles/index.html.erb
 And do the same thing again.
 
 =
-###Create the config file for the blog app
+###Create the config file for the blog application
 
 ```
 sudo touch etc/apache2/sites-available/ror_blog.conf
@@ -204,7 +204,7 @@ And insert the following making sure to replace darren with your own directory:
 ```
 
 =
-###Disable the default site in apache
+###Disable the default site in Apache
 
 ```
 sudo a2dissite 000-default
@@ -225,7 +225,7 @@ The above will give a list of sites that are currently enabled. If the name in t
 sudo a2ensite ror_blog.conf
 ```
 
-Then we need to reload the apache server
+Then we need to reload the Apache server
 
 =
 ###Relaod the Apache Server
@@ -325,7 +325,7 @@ vim app/views/actors/index.html.erb
 ```
 
 =
-###Create the config file for the sakila app
+###Create the config file for the sakila application
 
 ```
 sudo touch etc/apache2/sites-available/ror_sakila.conf
@@ -362,4 +362,10 @@ sudo a2ensite ror_sakila.conf
 
 You can now run the Gatling tests on the sakila app by following the instructions found here: https://github.com/archerydwd/gatling-tests
 
+=
+###The End
+
+Thanks for reading.
+
+Darren.
 
